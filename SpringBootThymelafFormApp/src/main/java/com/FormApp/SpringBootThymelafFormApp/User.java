@@ -13,6 +13,19 @@ public class User {
 	
 	
 	
+	public boolean isMarried() {
+		return married;
+	}
+	public void setMarried(boolean married) {
+		this.married = married;
+	}
+	
+	public Date getBirthday() {
+		return birthday;
+	}
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
 	@Override
 	public String toString() {
 		return "User [name=" + name + ", email=" + email + ", password=" + password + ", gender=" + gender + ", note="

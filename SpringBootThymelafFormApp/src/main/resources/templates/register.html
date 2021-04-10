@@ -16,6 +16,13 @@
 		margin: 5px;
 		padding: 5px;
 	}
+	input[type=text], input[type=password], select{
+		display: inline-block;
+		width: 200px;
+	}
+	input[type=checkbox]{
+		margin-right: 190px;
+	}
 </style>
 </head>
 <body>
@@ -25,12 +32,30 @@
 		<label>Full name:</label>
 		<input type="text" th:field="*{name}"/>
 		<br/>
-		<label>E-mail</label>
+		<label>E-mail:</label>
 		<input type="text" th:field="*{email}"/>
 		<br/>
-		<label>Password</label>
+		<label>Password:</label>
 		<input type="password" th:field="*{password}"/>
 		<br/>
+		<label>Birthday (yyyy-mm-dd):</label>
+		<input type="text" th:field="*{birthday}"/>
+		<br/>
+		<label>Profession:</label>
+		<select th:field="*{profession}">
+			<option th:each="p : ${professionList}" th:value="${p}" th:text="${p}"/>
+		</select>
+		<br/>
+		<label>Married?</label>
+		<input type="checkbox" th:field="*{married}" />
+		<br/>
+		<label>Gender:</label>
+		<input type="radio" th:field=*{gender} value="male">Male
+		<input type="radio" th:field=*{gender} value="female">Female
+		<br/>
+		<label>Note:</label>
+		<textarea rows="5" cols="25" th:field="*{note}"></textarea>
+		<br>
 		<button type="submit">Register</button>
 	</form> 
 	</div>
