@@ -3,6 +3,20 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<style type="text/css">
+	label{
+		display: inline-block;
+		width:200px;
+		margin:5px;
+		text-align:left;	
+	}
+	
+	register{
+		
+		margin: 5px;
+		padding: 5px;
+	}
+</style>
 </head>
 <body>
 	<div align="center"> 
@@ -10,6 +24,12 @@
 	<form action="#" th:action="@{/register}" th:object="${user}" method="post">
 		<label>Full name:</label>
 		<input type="text" th:field="*{name}"/>
+		<br/>
+		<label>E-mail</label>
+		<input type="text" th:field="*{email}"/>
+		<br/>
+		<label>Password</label>
+		<input type="password" th:field="*{password}"/>
 		<br/>
 		<button type="submit">Register</button>
 	</form> 

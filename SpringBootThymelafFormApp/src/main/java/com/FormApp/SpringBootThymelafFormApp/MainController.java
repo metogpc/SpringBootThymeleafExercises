@@ -15,16 +15,8 @@ public class MainController {
 		model.addAttribute("user",user);
 		return "register";
 	}
-	
-	@GetMapping("/register_success")
-	public String showRegister_success(Model model) {
-		User user=new User();
-		model.addAttribute("user",user);
-		return "register_success";
-	}
 		
-	
-	@PostMapping("/register_success" )
+	@PostMapping("/register" )
 	public String submitForm(@ModelAttribute("user") User user) {
 		System.out.println(user);
 		return "register_success";
